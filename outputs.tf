@@ -17,9 +17,9 @@ output "lb_arn_suffix" {
   description = "ARN suffix of our load balancer - can be used with CloudWatch."
   value       = concat(aws_lb.this.*.arn_suffix, [""])[0]
 }
-output "lb_private_ip_addresses" {
-  description = "Private IP addresses of the Load Balancer"
-  value       = concat(aws_lb.this.*.private_ip_addresses, [""])[0]
+output "lb_private_ip_address" {
+  description = "Private IP address of the Load Balancer"
+  value       = concat(aws_lb.this.*.private_ip_address, [""])[0]
 }
 output "lb_zone_id" {
   description = "The zone_id of the load balancer to assist with creating DNS records."
